@@ -22,14 +22,16 @@ jQuery('.markItUp').css('width', w)
 	static function load()
 	{
 		template_jquery();
-		$base = config('jquery.markitup.base');
-		$set  = config('jquery.markitup.sets.bbcode');
+//TODO: убрать после сноса из конфигов.
+//		$base = config('jquery.markitup.base');
+//		$set  = config('jquery.markitup.sets.bbcode');
+		$set = '/_bors-3rd/jquery/plugins/bors/markitup-sets/bbcode';
 		$set_js  = config('jquery.markitup.set.js', "$set/set.js");
 
-		template_css("$base/skins/simple/style.css");
+		template_css('/bower-asset/markitup/markitup/skins/simple/style.css');
 		template_css("$set/style.css");
 
-		template_js_include("$base/jquery.markitup.js");
+		template_js_include('/bower-asset/markitup/markitup/jquery.markitup.js');
 		template_js_include($set_js);
 	}
 }
