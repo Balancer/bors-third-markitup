@@ -1,0 +1,29 @@
+{
+	"name": "balancer/bors-third-markitup",
+	"description": "markItUp! component for BORS© framework",
+	"license": "GPLv3",
+
+	"authors": [
+		{
+			"name": "Balancer",
+			"email": "balancer@balancer.ru"
+		}
+	],
+
+	"require": {
+		"bower-asset/markitup": "*"
+	},
+
+	"type": "bors-assets",
+
+	"autoload": {
+		"classmap": ["classes/"],
+		"psr-4": {
+			"B2\\jQuery\\": "src/"
+		}
+	},
+
+    "extra": {
+        "bors-classes": "classes"
+    }
+}
