@@ -21,7 +21,7 @@ jQuery('.markItUp').css('width', w)
 
 	static function load()
 	{
-		jquery::load();
+		\B2\jQuery::load();
 //TODO: убрать после сноса из конфигов.
 //		$base = config('jquery.markitup.base');
 //		$set  = config('jquery.markitup.sets.bbcode');

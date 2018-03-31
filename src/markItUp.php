@@ -21,7 +21,7 @@ jQuery('.markItUp').css('width', w)
 
 	static function load()
 	{
-		template_jquery();
+		\B2\jQuery::load();
 		$base = config('jquery.markitup.base');
 		$set  = config('jquery.markitup.sets.bbcode');
 		$set_js  = config('jquery.markitup.set.js', "$set/set.js");
