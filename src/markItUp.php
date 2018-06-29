@@ -8,7 +8,7 @@ class markItUp
 	{
 		self::load();
 
-		jquery::on_ready("
+		\jquery::on_ready("
 w=jQuery('$id').parents('td').width()
 m=jQuery('$id').markItUp($settings).css('height', function() {
 	var h = jQuery(this).css('line-height').match(/(\d+)(.*)/)
@@ -22,8 +22,8 @@ jQuery('.markItUp').css('width', w)
 	static function load()
 	{
 		\B2\jQuery::load();
-		$base = config('jquery.markitup.base');
-		$set  = config('jquery.markitup.sets.bbcode');
+		$base = config('jquery.markitup.base', '/bower-asset/markitup/markitup');
+		$set  = config('jquery.markitup.sets.bbcode', '/_bors-3rd/jquery/plugins/bors/markitup-sets/bbcode');
 		$set_js  = config('jquery.markitup.set.js', "$set/set.js");
 
 		template_css("$base/skins/simple/style.css");
